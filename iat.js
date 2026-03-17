@@ -6,7 +6,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 			{
 				name : 'Mamíferos',
 				title : {
-					media : {word : 'Mamíferos'},
+					media : {word : 'coração'},
 					css : {color:'#31b404','font-size':'1.8em'},
 					height : 4,
 					startStimulus : { 
