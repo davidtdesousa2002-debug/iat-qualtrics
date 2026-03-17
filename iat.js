@@ -1,134 +1,108 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
  var API = new APIConstructor();
 
+	
 	return iatExtension({
-
-		practiceCategory1 : {
-			name : 'Mamíferos',
-			title : {
-				media : {word : 'Mamíferos'},
-				css : {color:'#31b404','font-size':'1.8em'},
-				height : 4,
-				startStimulus : { 
-					media : {word : 'Cachorro, Cavalo, Vaca, Leão'}, 
-					css : {color:'#31b404','font-size':'1em'}, 
-					height : 2
-				}
-			}, 
-			stimulusMedia : [
-				{word : 'Cachorro'}, 
-				{word : 'Cavalo'}, 
-				{word : 'Leão'}, 
-				{word : 'Vaca'}
-			], 
-			stimulusCss : {color:'#31b404','font-size':'2em'}
-		},	
-
-		practiceCategory2 : {
-			name : 'Aves', 
-			title : {
-				media : {word : 'Aves'}, 
-				css : {color:'#31b404','font-size':'1.8em'}, 
-				height : 4,
-				startStimulus : {
-					media : {word : 'Pombo, Cisne, Corvo, Corvo-marinho'}, 
-					css : {color:'#31b404','font-size':'1em'}, 
-					height : 2
-				}
-			}, 
-			stimulusMedia : [
-				{word : 'Pombo'}, 
-				{word : 'Cisne'}, 
-				{word : 'Corvo'}, 
-				{word : 'Corvo-marinho'}
-			], 
-			stimulusCss : {color:'#31b404','font-size':'2em'}
-		},
-
-		categories : [
+		practiceCategory1 : 
 			{
-				name : 'Pessoas Negras',
+				name : 'Mammals', //Will appear in the data.
 				title : {
-					media : {word : 'Pessoas Negras'},
-					css : {color:'#31b404','font-size':'1.8em'},
-					height : 4,
+					media : {word : 'Mammals'}, //Name of the category presented in the task.
+					css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
+					height : 4, //Height (because we need to know where to put the next item in the title)
 					startStimulus : { 
-						media : {image : 'blacks.jpg'}, 
+					//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
+						media : {word : 'Dogs, Horses, Cows, Lions'}, 
 						css : {color:'#31b404','font-size':'1em'}, 
-						height : 13
+						height : 2
 					}
 				}, 
-				stimulusMedia : [
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Dogs'}, 
+					{word : 'Horses'}, 
+					{word : 'Lions'}, 
+					{word : 'Cows'}
+				], 
+				//Stimulus css (style of the stimuli)
+				stimulusCss : {color:'#31b404','font-size':'2em'}
+			},	
+			practiceCategory2 : 
+			{
+				name : 'Birds', 
+				title : {
+					media : {word : 'Birds'}, 
+					css : {color:'#31b404','font-size':'1.8em'}, 
+					height : 4,
+					startStimulus : {
+						media : {word : 'Pigeons, Swans, Crows, Ravens'}, 
+						css : {color:'#31b404','font-size':'1em'}, 
+						height : 2
+					}
+				}, 
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Pigeons'}, 
+					{word : 'Swans'}, 
+					{word : 'Crows'}, 
+					{word : 'Ravens'}
+				], 
+				//Stimulus css
+				stimulusCss : {color:'#31b404','font-size':'2em'}
+			},
+			categories : [  //As many categories you need.
+				{
+					name : 'Black People', //Will appear in the data.
+					title : {
+						media : {word : 'Black People'}, //Name of the category presented in the task.
+						css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
+						height : 4, //Height (because we need to know where to put the next item in the title)
+						startStimulus : { 
+						//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
+						media : {image : 'blacks.jpg'}, 
+							css : {color:'#31b404','font-size':'1em'}, 
+							height : 13
+						}
+					}, 
+					stimulusMedia : [ //Stimuli content as PIP's media objects
 					{image : 'black1.jpg'}, 
         			{image : 'black2.jpg'}, 
         			{image : 'black3.jpg'}, 
         			{image : 'black4.jpg'}, 
         			{image : 'black5.jpg'}, 
         			{image : 'black6.jpg'}
-				], 
-				stimulusCss : {color:'#31b404','font-size':'2em'}
-			},	
-
-			{
-				name : 'Pessoas Brancas', 
-				title : {
-					media : {word : 'Pessoas Brancas'}, 
-					css : {color:'#31b404','font-size':'1.8em'}, 
-					height : 4,
-					startStimulus : {
-						media : {image : 'whites.jpg'},  
-						css : {color:'#31b404','font-size':'1em'}, 
-						height : 13
-					}
-				}, 
-				stimulusMedia : [
+					], 
+					//Stimulus css (style of the stimuli)
+					stimulusCss : {color:'#31b404','font-size':'2em'}
+				},	
+				{
+					name : 'White people', 
+					title : {
+						media : {word : 'White people'}, 
+						css : {color:'#31b404','font-size':'1.8em'}, 
+						height : 4,
+						startStimulus : {
+							media : {image : 'whites.jpg'},  
+							css : {color:'#31b404','font-size':'1em'}, 
+							height : 13
+						}
+					}, 
+					stimulusMedia : [ //Stimuli content as PIP's media objects
 					{image : 'yf1.jpg'}, 
         			{image : 'yf4.jpg'}, 
         			{image : 'yf5.jpg'}, 
         			{image : 'ym2.jpg'}, 
         			{image : 'ym3.jpg'}, 
         			{image : 'ym5.jpg'}
-				], 
-				stimulusCss : {color:'#31b404','font-size':'2em'}
-			}
-		],
-
-		attribute1 : {
-			name : 'Agradável',
-			title : {
-				media : {word : 'Agradável'},
-				css : {color:'#0000FF','font-size':'1.8em'},
-				height : 4
-			},
-			stimulusMedia : [
-				{word : 'Alegria'},
-				{word : 'Amor'},
-				{word : 'Paz'},
-				{word : 'Prazer'},
-				{word : 'Felicidade'}
+					], 
+					//Stimulus css
+					stimulusCss : {color:'#31b404','font-size':'2em'}
+				}
 			],
-			stimulusCss : {color:'#0000FF','font-size':'2em'}
-		},
-
-		attribute2 : {
-			name : 'Desagradável',
-			title : {
-				media : {word : 'Desagradável'},
-				css : {color:'#0000FF','font-size':'1.8em'},
-				height : 4
-			},
-			stimulusMedia : [
-				{word : 'Ódio'},
-				{word : 'Dor'},
-				{word : 'Tristeza'},
-				{word : 'Ruim'},
-				{word : 'Terrível'}
-			],
-			stimulusCss : {color:'#0000FF','font-size':'2em'}
-		},
-
-		base_url : {
+			base_url : {//Where are your images at?
 			image : 'https://baranan.github.io/minno-tasks/images/'
-		}
+				
+			} 
 	});
 });
+
+
+
