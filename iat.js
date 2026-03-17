@@ -44,8 +44,8 @@ attribute2 : {
 					}
 				}, 
 				stimulusMedia : [
-					{word : 'Cachorros'}, 
-					{word : 'Cavalos'}, 
+					{word : 'Xicaras'}, 
+					{word : 'Ratos'}, 
 					{word : 'Leões'}, 
 					{word : 'Vacas'}
 				], 
