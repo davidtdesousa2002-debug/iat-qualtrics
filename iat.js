@@ -1,33 +1,46 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/qiat6.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
+ var API = new APIConstructor();
 
-var API = new APIConstructor();
-
-return iatExtension({
+ return iatExtension({
 
     practiceCategory1 : {
-        name : 'Pessoas Negras',
+        name : 'Mamíferos',
         title : {
-            media : {word : 'Pessoas Negras'},
+            media : {word : 'Mamíferos'},
             css : {color:'#31b404','font-size':'1.8em'},
-            height : 4
+            height : 4,
+            startStimulus : {
+                media : {word : 'Cachorro, Cavalo, Leão, Vaca'},
+                css : {color:'#31b404','font-size':'1em'},
+                height : 2
+            }
         },
         stimulusMedia : [
-            {word : 'Exemplo 1'},
-            {word : 'Exemplo 2'}
+            {word : 'Cachorro'},
+            {word : 'Cavalo'},
+            {word : 'Leão'},
+            {word : 'Vaca'}
         ],
         stimulusCss : {color:'#31b404','font-size':'2em'}
     },
 
     practiceCategory2 : {
-        name : 'Pessoas Brancas',
+        name : 'Aves',
         title : {
-            media : {word : 'Pessoas Brancas'},
+            media : {word : 'Aves'},
             css : {color:'#31b404','font-size':'1.8em'},
-            height : 4
+            height : 4,
+            startStimulus : {
+                media : {word : 'Pombo, Cisne, Corvo, Águia'},
+                css : {color:'#31b404','font-size':'1em'},
+                height : 2
+            }
         },
         stimulusMedia : [
-            {word : 'Exemplo 3'},
-            {word : 'Exemplo 4'}
+            {word : 'Pombo'},
+            {word : 'Cisne'},
+            {word : 'Corvo'},
+            {word : 'Águia'}
         ],
         stimulusCss : {color:'#31b404','font-size':'2em'}
     },
@@ -41,10 +54,11 @@ return iatExtension({
                 height : 4
             },
             stimulusMedia : [
-                {word : 'Exemplo 1'},
-                {word : 'Exemplo 2'}
+                {image : 'black1.jpg'},
+                {image : 'black2.jpg'},
+                {image : 'black3.jpg'}
             ],
-            stimulusCss : {color:'#31b404','font-size':'2em'}
+            stimulusCss : {height:'150px'}
         },
         {
             name : 'Pessoas Brancas',
@@ -54,10 +68,11 @@ return iatExtension({
                 height : 4
             },
             stimulusMedia : [
-                {word : 'Exemplo 3'},
-                {word : 'Exemplo 4'}
+                {image : 'white1.jpg'},
+                {image : 'white2.jpg'},
+                {image : 'white3.jpg'}
             ],
-            stimulusCss : {color:'#31b404','font-size':'2em'}
+            stimulusCss : {height:'150px'}
         }
     ],
 
@@ -71,9 +86,7 @@ return iatExtension({
         stimulusMedia : [
             {word : 'Alegria'},
             {word : 'Amor'},
-            {word : 'Feliz'},
-            {word : 'Prazer'},
-            {word : 'Bom'}
+            {word : 'Paz'}
         ],
         stimulusCss : {color:'#0000FF','font-size':'2em'}
     },
@@ -88,16 +101,14 @@ return iatExtension({
         stimulusMedia : [
             {word : 'Ódio'},
             {word : 'Dor'},
-            {word : 'Triste'},
-            {word : 'Ruim'},
-            {word : 'Terrível'}
+            {word : 'Tristeza'}
         ],
         stimulusCss : {color:'#0000FF','font-size':'2em'}
     },
 
     base_url : {
-        image : ''
+        image : 'https://baranan.github.io/minno-tasks/images/'
     }
 
-});
+ });
 });
