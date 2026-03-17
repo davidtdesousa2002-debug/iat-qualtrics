@@ -4,7 +4,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 	return iatExtension({
 		practiceCategory1 : 
 			{
-				name : 'Mamíferos',
+				name : 'Coração',
 				title : {
 					media : {word : 'coração'},
 					css : {color:'#31b404','font-size':'1.8em'},
