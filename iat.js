@@ -1,7 +1,35 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
  var API = new APIConstructor();
 
-	return iatExtension({
+	return iatExtension({ attribute1 : {
+    name : 'Positivo',
+    title : {
+        media : {word : 'Positivo'},
+        css : {color:'#0000FF','font-size':'1.8em'},
+        height : 4
+    },
+    stimulusMedia : [
+        {word : 'Alegria'},
+        {word : 'Amor'},
+        {word : 'Feliz'},
+        {word : 'Bom'}
+    ]
+},
+
+attribute2 : {
+    name : 'Negativo',
+    title : {
+        media : {word : 'Negativo'},
+        css : {color:'#FF0000','font-size':'1.8em'},
+        height : 4
+    },
+    stimulusMedia : [
+        {word : 'Dor'},
+        {word : 'Ódio'},
+        {word : 'Triste'},
+        {word : 'Ruim'}
+    ]
+},
 		practiceCategory1 : 
 			{
 				name : 'Mamíferos',
