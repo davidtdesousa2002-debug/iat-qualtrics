@@ -1,82 +1,76 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
  var API = new APIConstructor();
 
-	
 	return iatExtension({
 		practiceCategory1 : 
 			{
-				name : 'Mamíferos', //Will appear in the data.
+				name : 'Mamíferos',
 				title : {
-					media : {word : 'Mamíferos'}, //Name of the category presented in the task.
-					css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
-					height : 4, //Height (because we need to know where to put the next item in the title)
+					media : {word : 'Mamíferos'},
+					css : {color:'#31b404','font-size':'1.8em'},
+					height : 4,
 					startStimulus : { 
-					//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
-						media : {word : 'Dogs, Horses, Cows, Lions'}, 
+						media : {word : 'Cachorros, Cavalos, Vacas, Leões'}, 
 						css : {color:'#31b404','font-size':'1em'}, 
 						height : 2
 					}
 				}, 
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word : 'Dogs'}, 
-					{word : 'Horses'}, 
-					{word : 'Lions'}, 
-					{word : 'Cows'}
+				stimulusMedia : [
+					{word : 'Cachorros'}, 
+					{word : 'Cavalos'}, 
+					{word : 'Leões'}, 
+					{word : 'Vacas'}
 				], 
-				//Stimulus css (style of the stimuli)
 				stimulusCss : {color:'#31b404','font-size':'2em'}
 			},	
 			practiceCategory2 : 
 			{
-				name : 'Birds', 
+				name : 'Aves', 
 				title : {
-					media : {word : 'Birds'}, 
+					media : {word : 'Aves'}, 
 					css : {color:'#31b404','font-size':'1.8em'}, 
 					height : 4,
 					startStimulus : {
-						media : {word : 'Pigeons, Swans, Crows, Ravens'}, 
+						media : {word : 'Pombos, Cisnes, Corvos, Gralhas'}, 
 						css : {color:'#31b404','font-size':'1em'}, 
 						height : 2
 					}
 				}, 
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word : 'Pigeons'}, 
-					{word : 'Swans'}, 
-					{word : 'Crows'}, 
-					{word : 'Ravens'}
+				stimulusMedia : [
+					{word : 'Pombos'}, 
+					{word : 'Cisnes'}, 
+					{word : 'Corvos'}, 
+					{word : 'Gralhas'}
 				], 
-				//Stimulus css
 				stimulusCss : {color:'#31b404','font-size':'2em'}
 			},
-			categories : [  //As many categories you need.
+			categories : [
 				{
-					name : 'Black People', //Will appear in the data.
+					name : 'Pessoas Negras',
 					title : {
-						media : {word : 'Black People'}, //Name of the category presented in the task.
-						css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
-						height : 4, //Height (because we need to know where to put the next item in the title)
+						media : {word : 'Pessoas Negras'},
+						css : {color:'#31b404','font-size':'1.8em'},
+						height : 4,
 						startStimulus : { 
-						//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
-						media : {image : 'blacks.jpg'}, 
+							media : {image : 'blacks.jpg'}, 
 							css : {color:'#31b404','font-size':'1em'}, 
 							height : 13
 						}
 					}, 
-					stimulusMedia : [ //Stimuli content as PIP's media objects
-					{image : 'black1.jpg'}, 
-        			{image : 'black2.jpg'}, 
-        			{image : 'black3.jpg'}, 
-        			{image : 'black4.jpg'}, 
-        			{image : 'black5.jpg'}, 
-        			{image : 'black6.jpg'}
+					stimulusMedia : [
+						{image : 'black1.jpg'}, 
+						{image : 'black2.jpg'}, 
+						{image : 'black3.jpg'}, 
+						{image : 'black4.jpg'}, 
+						{image : 'black5.jpg'}, 
+						{image : 'black6.jpg'}
 					], 
-					//Stimulus css (style of the stimuli)
 					stimulusCss : {color:'#31b404','font-size':'2em'}
 				},	
 				{
-					name : 'White people', 
+					name : 'Pessoas Brancas', 
 					title : {
-						media : {word : 'White people'}, 
+						media : {word : 'Pessoas Brancas'}, 
 						css : {color:'#31b404','font-size':'1.8em'}, 
 						height : 4,
 						startStimulus : {
@@ -85,25 +79,20 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 							height : 13
 						}
 					}, 
-					stimulusMedia : [ //Stimuli content as PIP's media objects
-					{image : 'yf1.jpg'}, 
-        			{image : 'yf4.jpg'}, 
-        			{image : 'yf5.jpg'}, 
-        			{image : 'ym2.jpg'}, 
-        			{image : 'ym3.jpg'}, 
-        			{image : 'ym5.jpg'}
+					stimulusMedia : [
+						{image : 'yf1.jpg'}, 
+						{image : 'yf4.jpg'}, 
+						{image : 'yf5.jpg'}, 
+						{image : 'ym2.jpg'}, 
+						{image : 'ym3.jpg'}, 
+						{image : 'ym5.jpg'}
 					], 
-					//Stimulus css
 					stimulusCss : {color:'#31b404','font-size':'2em'}
 				}
 			],
-			base_url : {//Where are your images at?
-			image : 'https://baranan.github.io/minno-tasks/images/'
-				
-			} 
+			base_url : {
+				image : 'https://baranan.github.io/minno-tasks/images/'
+			},
+			taskName: 'BIAT_Racismo_PT'
 	});
 });
-
-
-
-
