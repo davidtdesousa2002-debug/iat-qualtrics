@@ -90,6 +90,46 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 					stimulusCss : {color:'#31b404','font-size':'2em'}
 				}
 			],
+		attribute1 : {
+            name : 'Positivo',
+            title : {
+                media : {word : 'Positivo'},
+                css : {color:'#31b404','font-size':'1.8em'},
+                height : 4,
+                startStimulus : { 
+                    media : {word : 'Amor, Alegria, Feliz, Sucesso'}, 
+                    css : {color:'#31b404','font-size':'1em'}, 
+                    height : 2
+                }
+            },
+            stimulusMedia : [
+                {word : 'Amor'},
+                {word : 'Alegria'},
+                {word : 'Feliz'},
+                {word : 'Sucesso'}
+            ],
+            stimulusCss : {color:'#31b404','font-size':'2em'}
+        },
+        attribute2 : {
+            name : 'Negativo',
+            title : {
+                media : {word : 'Negativo'},
+                css : {color:'#31b404','font-size':'1.8em'},
+                height : 4,
+                startStimulus : { 
+                    media : {word : 'Raiva, Tristeza, Medo, Fracasso'}, 
+                    css : {color:'#31b404','font-size':'1em'}, 
+                    height : 2
+                }
+            },
+            stimulusMedia : [
+                {word : 'Raiva'},
+                {word : 'Tristeza'},
+                {word : 'Medo'},
+                {word : 'Fracasso'}
+            ],
+            stimulusCss : {color:'#31b404','font-size':'2em'}
+        },
 			base_url : {
 				image : 'https://baranan.github.io/minno-tasks/images/'
 			},
