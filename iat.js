@@ -1,13 +1,13 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualtrics@main/biat.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
  var API = new APIConstructor();
 
 	
 	return iatExtension({
 		practiceCategory1 : 
 			{
-				name : 'Mamis', //Will appear in the data.
+				name : 'Mamíferos', //Will appear in the data.
 				title : {
-					media : {word : 'Mamis'}, //Name of the category presented in the task.
+					media : {word : 'Mamíferos'}, //Name of the category presented in the task.
 					css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
 					height : 4, //Height (because we need to know where to put the next item in the title)
 					startStimulus : { 
@@ -103,7 +103,3 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 			} 
 	});
 });
-
-
-
-
