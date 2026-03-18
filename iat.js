@@ -1,5 +1,5 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualtrics@main/iat.js'], function(APIConstructor, iatExtension){
- var API = new APIConstructor();
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualtrics@main/biat.pt.js'], function(APIConstructor, iatExtension){
+  var API = new APIConstructor();
 
 	
 	return iatExtension({
@@ -7,7 +7,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 			{
 				name : 'Mamíferos', //Will appear in the data.
 				title : {
-					media : {word : 'Mamíferos'}, //Name of the category presented in the task.
+					media : {word : 'Mammals'}, //Name of the category presented in the task.
 					css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
 					height : 4, //Height (because we need to know where to put the next item in the title)
 					startStimulus : { 
@@ -18,7 +18,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 					}
 				}, 
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word : 'Dogs'}, 
+					{word : 'Cão'}, 
 					{word : 'Horses'}, 
 					{word : 'Lions'}, 
 					{word : 'Cows'}
@@ -28,9 +28,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 			},	
 			practiceCategory2 : 
 			{
-				name : 'Aves', 
+				name : 'Birds', 
 				title : {
-					media : {word : 'Aves'}, 
+					media : {word : 'Birds'}, 
 					css : {color:'#31b404','font-size':'1.8em'}, 
 					height : 4,
 					startStimulus : {
@@ -50,7 +50,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 			},
 			categories : [  //As many categories you need.
 				{
-					name : 'Pessoas Negras', //Will appear in the data.
+					name : 'Black People', //Will appear in the data.
 					title : {
 						media : {word : 'Black People'}, //Name of the category presented in the task.
 						css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
@@ -59,7 +59,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 						//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
 						media : {image : 'blacks.jpg'}, 
 							css : {color:'#31b404','font-size':'1em'}, 
-							height : 13
+							height : 2
 						}
 					}, 
 					stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -74,15 +74,15 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/davidtdesousa2002-debug/iat-qualt
 					stimulusCss : {color:'#31b404','font-size':'2em'}
 				},	
 				{
-					name : 'Pessoas Brancas', 
+					name : 'White people', 
 					title : {
-						media : {word : 'Pessoas Brancas'}, 
+						media : {word : 'White people'}, 
 						css : {color:'#31b404','font-size':'1.8em'}, 
 						height : 4,
 						startStimulus : {
 							media : {image : 'whites.jpg'},  
 							css : {color:'#31b404','font-size':'1em'}, 
-							height : 13
+							height : 2
 						}
 					}, 
 					stimulusMedia : [ //Stimuli content as PIP's media objects
